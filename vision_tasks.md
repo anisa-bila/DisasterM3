@@ -1,4 +1,4 @@
-Vision Tasks - The difference between classification, detection, and segmentation.
+## Vision Tasks - The difference between classification, detection, and segmentation.
 
 These three objectives are fundamental in computer vision. Each of them detect objects and provide details with precision in their own levels. They are used in natural disasters to automatically monitor and analyze damage assessment, allowing optimization of rescue operations.
 
