@@ -1,6 +1,6 @@
 Vision Language Models are multimodal models that process both images and text to generate classified text outputs. They can assess a wide variety of images, including those depicting natural disasters.
 
-1. **Nature of Data**
+# Nature of Data
 
 Vision Language Models are trained on diverse datasets to pair high-quality images with rich textual descriptions. A varied dataset achieves optimal performance, eliminating generic outputs.
 
@@ -31,7 +31,7 @@ Two types of data are critical for this training process:
   - **Domain-specific Data**: Specialized datasets that help VLMs understand the link between an image and the given text the same way teams and organizations do. (e.g., A photo of earthquake damage - "Collapsed buildings observed, high-risk of injuries.")
   - **Web-Scale Data**: Billions of image-text pairs uploaded from the Internet into a large dataset to further expand concepts.
 <br>
-2. **Evaluation Metrics**
+# Evaluation Metrics
 
 
 
