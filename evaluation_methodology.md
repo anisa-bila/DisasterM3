@@ -44,7 +44,7 @@ Vision Language Models (VLMs) use several evaluation metrics that assess their c
   
 **Accuracy**
   
-This metric determines how well the model can correctly associate images with their corresponding textual data.
+- This metric determines how well the model can correctly associate images with their corresponding textual data.
    <br>
 - **Importance in Natural Disaster**: The ability of models to accurately comprehend image-text association is highly critical, as a wrong comprehension could risk wrong emergency responses.
   
