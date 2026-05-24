@@ -36,23 +36,39 @@ Two types of data are critical for this training process:
 
 Vision Language Models (VLMs) use several evaluation metrics that assess their capabilities in both understanding and integrating visual and textual data.
 
-- **Benchmark Datasets**: Different models are tested with standardized datasets with the purpose of challenging the model's reasoning and comprehension capabilities, often used as performance comparison between different models.
+**Benchmark Datasets**
+
+Different models are tested with standardized datasets with the purpose of challenging the model's reasoning and comprehension capabilities, often used as performance comparison between different models.
   <br>
-  **Importance in Natural Disaster**: Benchmark datasets allow the team to compare performance across models to determine and select the most reliable model. A model with poor benchmarking often fails to translate real-world scenarios, bringing risks in a diaster scenario.
-- **Accuracy**: This metric determines how well the model can correctly associate images with their corresponding textual data.
+- **Importance in Natural Disaster**: Benchmark datasets allow the team to compare performance across models to determine and select the most reliable model. A model with poor benchmarking often fails to translate real-world scenarios, bringing risks in a diaster scenario.
+  
+**Accuracy**
+  
+This metric determines how well the model can correctly associate images with their corresponding textual data.
    <br>
-  **Importance in Natural Disaster**: The ability of models to accurately comprehend image-text association is highly critical, as a wrong comprehension could risk wrong emergency responses.
-- **Precision**: Measures how many of the model's output results are actually relevant and correct. A high precision score indicates the model avoids false detections.
+- **Importance in Natural Disaster**: The ability of models to accurately comprehend image-text association is highly critical, as a wrong comprehension could risk wrong emergency responses.
+  
+**Precision**
+
+Measures how many of the model's output results are actually relevant and correct. A high precision score indicates the model avoids false detections.
      <br>
-  **Importance in Natural Disaster**: Avoids flagging unharmed structures as damages to preserve resources and time for emergency responses that the team actually needs.
-- **Recall**: Captures the correct answers that exist within the dataset the model was able to successfully identify and generate.
+- **Importance in Natural Disaster**: Avoids flagging unharmed structures as damages to preserve resources and time for emergency responses that the team actually needs.
+  
+**Recall**
+
+Captures the correct answers that exist within the dataset the model was able to successfully identify and generate.
   <br>
-  **Importance in Natural Disaster**: Ensures no critical disaster areas or damages are missed, as overlooking affected parts could leave people without aid.
-- **F1 Score**: A balanced combination between precision and recall, useful for a dataset where the risks of false positives from incorrect outputs and false negatives from missed correct data are present.
+- **Importance in Natural Disaster**: Ensures no critical disaster areas or damages are missed, as overlooking affected parts could leave people without aid.
+  
+**F1 Score**
+
+A balanced combination between precision and recall, useful for a dataset where the risks of false positives from incorrect outputs and false negatives from missed correct data are present.
   <br>
-  **Importance in Natural Disaster**: THe presence of false positive or false negative in a disaster case can directly harm affected people by providing wrong emergency responses.
-- **Vector Quality**: A fundamental metric that involves analyzing the distance between vectors in a high-dimensional space, also known as a shared embedding space, to measure the similarity of relationships between them. Vectors that are close together indicate a  strong text-image link.
+- **Importance in Natural Disaster**: THe presence of false positive or false negative in a disaster case can directly harm affected people by providing wrong emergency responses.
+  
+**Vector Quality**
+A fundamental metric that involves analyzing the distance between vectors in a high-dimensional space, also known as a shared embedding space, to measure the similarity of relationships between them. Vectors that are close together indicate a  strong text-image link.
   <br>
-  **Importance in Natural Disaster**: Helps the model associate a disaster visual data with its corresponding textual data. A flood image should link to a flood situation report to generate appropriate emergency measures.
+- **Importance in Natural Disaster**: Helps the model associate a disaster visual data with its corresponding textual data. A flood image should link to a flood situation report to generate appropriate emergency measures.
 
   
