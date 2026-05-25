@@ -62,7 +62,7 @@ The preprocessing pipeline includes:
 ```
 DisasterM3/
 ├── pyscripts/
-│   ├── \_\_init\_\_.py
+│   ├── run_vllm.py
 ```
 
 The ```pyscripts``` package is the main script that runs everything, prepares prompts about disaster images as input for the model. The model's answers are saved in the results file.
@@ -83,6 +83,11 @@ Each model has its own way of accepting a format and input, with some functions 
 
 ### Duplicated Logic
 Some preprocessing and evaluation logic appears duplicated across scripts instead of a centralized reusable modules that can be used by all models.
+
+## Framework Tied to DisasterM3
+The script, ```disasterm3/pyscripts/run_vllm.py```, reads a JSON file with specific fields and data that are designed specifically for DisasterM3. Other datasets would need refining. Models are strictly evaluated with only this dataset with this hardcode format.
+
+
 
 
 
