@@ -31,3 +31,50 @@ DisasterM3/
 └── vision_tasks.md
     Explains the differences between classification, detection, and segmentation tasks
 ```
+
+## Code Organization Analysis #1
+
+```
+DisasterM3/
+├── models/
+│   ├── \_\_init\_\_.py
+```
+
+The ```models/``` package is responsible for preprocessesing videos and images into an ideal format for the model before feeding it with them. The script is designed to format different instructions for diverse models prefer as input.
+
+The whole script consists of two sections:
+
+### Preprocessing
+The preprocessing pipeline includes:
+
+- Detecting whether the input contains an image or a video
+- Extracting a few still frames if a video was provided.
+- Resizing images to fit the model's input preference in the right color format.
+- Finding closest aspect ratios to the image's original proportions to avoid distortion.
+
+### Formatting
+- Initially runs the tokenizer of each model to convert text into numbers.
+- Sets up each model's configuration (max tokens, max frames, number of GPUs).
+- Combines the preprocessed images/video together with the text questions into a specific input structure each model prefers.
+
+## Code Organization Analysis #2
+
+```
+DisasterM3/
+├── pyscripts/
+│   ├── \_\_init\_\_.py
+```
+
+The ```pyscripts``` package is the main script that runs everything, prepares prompts about disaster images as input for the model. The model's answers are saved in the results file.
+
+This main script includes:
+
+- ```prompt_libs```, a collection of blank question templates covering different disaster assessment tasks such as damage description and recovery recommendations, which later get filled with relevant pre-disaster and post-disaster images and questions.
+- ```get_messages_from_data``` fills the templates with actual disaster images and questions from the dataset for the model to answer.
+- Finalization of the script involves loading the disaster dataset, feeding it in batches through the model, and saving the answers to a result file.
+
+## The Limitations
+
+## Difficult to Maintain
+The script, ```disasterm3/models/\_\_init\_\_.py```, has huge blocks of code with different kinds of functions designed for each models.
+
