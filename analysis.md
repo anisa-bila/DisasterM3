@@ -75,6 +75,14 @@ This main script includes:
 
 ## The Limitations
 
-## Difficult to Maintain
-The script, ```disasterm3/models/\_\_init\_\_.py```, has huge blocks of code with different kinds of functions designed for each models.
+### Difficult to Maintain
+The script, ```disasterm3/models/\_\_init\_\_.py```, has huge blocks of code with different kinds of functions designed for each model. It would take time to find a specific variable or function in the script to make adjustments.
+
+### Lack of Standardization
+Each model has its own way of accepting a format and input, with some functions serving only a single model. Adding a new model means writing a whole new functionw with its own formatting logic from scratch.
+
+### Duplicated Logic
+Some preprocessing and evaluation logic appears duplicated across scripts instead of a centralized reusable modules that can be used by all models.
+
+
 
