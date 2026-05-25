@@ -18,6 +18,7 @@ pyscripts/
 
 ├── __init__.py
 - An empty file that makes pyscripts a Python package
+
 ├── run_vllm.py
 - Main script that runs the actual inference stage
 - Prepares prompts about diaster images as input for the model
