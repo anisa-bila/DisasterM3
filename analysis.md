@@ -40,14 +40,14 @@ DisasterM3/
 │   ├── \_\_init\_\_.py
 ```
 
-The ```models/``` package is responsible for preprocessesing videos and images into an ideal format for the model before feeding it with them. The script is designed to format different instructions for diverse models prefer as input.
+The ```models/``` package is responsible for preprocessing videos and images into an ideal format for the model before feeding it with them. The script is designed to format inputs differently depending on which model is being used.
 
 The whole script consists of two sections:
 
 ### Preprocessing
 The preprocessing pipeline includes:
 
-- Detecting whether the input contains an image or a video
+- Detecting whether the input contains an image or a video.
 - Extracting a few still frames if a video was provided.
 - Resizing images to fit the model's input preference in the right color format.
 - Finding closest aspect ratios to the image's original proportions to avoid distortion.
@@ -79,13 +79,23 @@ This main script includes:
 The script, ```disasterm3/models/\_\_init\_\_.py```, has huge blocks of code with different kinds of functions designed for each model. It would take time to find a specific variable or function in the script to make adjustments.
 
 ### Lack of Standardization
-Each model has its own way of accepting a format and input, with some functions serving only a single model. Adding a new model means writing a whole new functionw with its own formatting logic from scratch.
+Each model has its own way of accepting a format and input, with some functions serving only a single model. Adding a new model means writing a whole new function with its own formatting logic from scratch.
 
 ### Duplicated Logic
 Some preprocessing and evaluation logic appears duplicated across scripts instead of a centralized reusable modules that can be used by all models.
 
+## Modular Redesigns
+
+### Organize Functions
+Separate scripts into independent functions for efficient modification. Each model can also get their own Python scripts.
+
 ## Framework Tied to DisasterM3
+
 The script, ```disasterm3/pyscripts/run_vllm.py```, reads a JSON file with specific fields and data that are designed specifically for DisasterM3. Other datasets would need refining. Models are strictly evaluated with only this dataset with this hardcode format.
+
+### Possible Solution
+```disasterm3/models/\_\_init\_\_.py``` had different models with different requirements, but they were forced by ```ModelConfig``` to follow the same structure. Similarily, ```disasterm3/datasets/``` can be created to handle the differences of the dataset by creating a standard format. This reduces messy field names when adding more data.
+
 
 
 
