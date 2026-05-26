@@ -33,6 +33,17 @@ DisasterM3 includes 26,988 bi-temporal satellite images and 123k instruction pai
 2. Multi-sensor: Extreme weather during disasters often hinders optical sensor imaging, making it necessary to combine Synthetic Aperture Radar (SAR) imagery for post-disaster scenes
 3. Multi-task: 9 disaster-related visual perception and reasoning tasks, harnessing the full potential of VLM's reasoning ability
 
+## Requirements
+
+### System Requirements
+- Linux or Docker environment (vLLM does not support Windows).
+- Multiple high-end GPUs (e.g H100) to support larger models for high-performance inference.
+
+### Installation
+- Install the required Python packages: ```pip install Pillow tqdm transformers vllm```.
+
+### Dataset 
+- Download the DisasterM3 dataset from the attached link above before running the code.
 
 ## News
 - 2025/10/23, We released the DisasterM3 [instruct set](https://forms.gle/APQpmyuThh28HsJdA).
