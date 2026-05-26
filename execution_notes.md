@@ -5,9 +5,9 @@ In this document, ```DisasterM3/pyscripts/run_vllm.py``` is executed to test and
 ## Known Dependencies
 
 ### Module Installation
-Many modules require installation to move forward with the script. Each module is allocated a different size. 
+Many modules require installation to move forward with the script. Each module varies in size and installation time.. 
 
-### Linux or Docker Support
+### Linux or Docker Required
 VLLM module performs better in Linux or Docker environments. Linux is highly recommended and best-supported for vLLM, designed for high-performance server environments with GPU support.
 
 ### GPU Dependency
