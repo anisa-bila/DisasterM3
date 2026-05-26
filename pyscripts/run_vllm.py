@@ -12,6 +12,7 @@ from transformers import GenerationConfig
 from vllm import EngineArgs, LLM, SamplingParams
 
 from models import build_model_config, ModelConfig
+from datasets import build_dataset_config
 
 
 PROJECT_ROOT = dirname(dirname(dirname(abspath(__file__))))
@@ -214,8 +215,6 @@ if __name__ == '__main__':
         print(f"Resume from {len(finish_ids)} finished samples")
     else:
         print(f"Start from scratch")
-
-    from datasets import build_dataset_config
 
     dataset = build_dataset_config("disasterm3", PROJECT_ROOT, args.subset)
     ds = dataset.load()
