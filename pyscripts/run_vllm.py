@@ -215,12 +215,11 @@ if __name__ == '__main__':
     else:
         print(f"Start from scratch")
 
-    subset_json = join(f"{PROJECT_ROOT}/data", f"{args.subset}.json")
-    print("Reading data from {}".format(subset_json))
-    with open(subset_json, "r") as f:
-        ds = json.load(f)
-        ds = [dict(id=f"{args.subset}_{data_idx}", **data_dict) for data_idx, data_dict in enumerate(ds)]
-        ds = [data_dict for data_dict in ds if data_dict["id"] not in finish_ids]
+    from datasets import build_dataset_config
+
+    dataset = build_dataset_config("disasterm3", PROJECT_ROOT, args.subset)
+    ds = dataset.load()
+    ds = [data_dict for data_dict in ds if data_dict["id"] not in finish_ids]
 
     if len(ds) > 0:
         model_config = build_model_config(model_id=args.model_id, max_model_len=args.max_model_len, max_tokens=args.max_tokens)
