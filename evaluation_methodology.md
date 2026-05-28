@@ -10,7 +10,7 @@ When especially used in the case of natural disasters, it is critical for the da
 
 **Image-text Pair**:
 
-Image-text pairimg involves matching visual data with textual data. Their features are converted into numerical vectors within a common space called a shared embedding space, enabling comparison between image-text pairs.
+Image-text pairing involves matching visual data with textual data. Their features are converted into numerical vectors within a common space called a shared embedding space, enabling comparison between image-text pairs.
 
 Two types of data are critical for this training process:
 
