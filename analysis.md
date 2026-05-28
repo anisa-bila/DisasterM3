@@ -40,22 +40,22 @@ DisasterM3/
 │   ├── \_\_init\_\_.py
 ```
 
-The ```models/``` package is responsible for preprocessing videos and images into an ideal format for the model before feeding it with them. The script is designed to format inputs differently depending on which model is being used.
+The ```models/``` package is responsible for preprocessing videos and images into an ideal format before feeding them into the model. The script is designed to format inputs differently depending on which model is being used.
 
-The whole script consists of two sections:
+The script mainly consists of two sections:
 
 ### Preprocessing
 The preprocessing pipeline includes:
 
 - Detecting whether the input contains an image or a video.
-- Extracting a few still frames if a video was provided.
-- Resizing images to fit the model's input preference in the right color format.
-- Finding closest aspect ratios to the image's original proportions to avoid distortion.
+- Extracting several still frames if a video is provided.
+- Resizing images to fit the model's preferred input size and color format.
+- Finding the closest aspect ratios to the image's original proportions to reduce distortion.
 
 ### Formatting
-- Initially runs the tokenizer of each model to convert text into numbers.
-- Sets up each model's configuration (max tokens, max frames, number of GPUs).
-- Combines the preprocessed images/video together with the text questions into a specific input structure each model prefers.
+- Initially runs the tokenizer of each model to convert text into numerical representations.
+- Configuring each model's specific settings (max tokens, max frames, number of GPUs).
+- Combines the preprocessed images or videos with the text questions into a specific input preferred by each model.
 
 ## Code Organization Analysis #2
 
@@ -65,7 +65,7 @@ DisasterM3/
 │   ├── run_vllm.py
 ```
 
-The ```pyscripts``` package is the main script that runs everything, prepares prompts about disaster images as input for the model. The model's answers are saved in the results file.
+The ```pyscripts``` package is the main script that runs the system. It prepares prompts about disaster images as input for the model. The model's answers are saved in the results file.
 
 This main script includes:
 
@@ -94,7 +94,7 @@ Separate scripts into independent functions for efficient modification. Each mod
 The script, ```disasterm3/pyscripts/run_vllm.py```, reads a JSON file with specific fields and data that are designed specifically for DisasterM3. Other datasets would need refining. Models are strictly evaluated with only this dataset with this hardcode format.
 
 ### Possible Solution
-```disasterm3/models/\_\_init\_\_.py``` had different models with different requirements, but they were forced by ```ModelConfig``` to follow the same structure. Similarily, ```disasterm3/datasets/``` can be created to handle the differences of the dataset by creating a standard format. This reduces messy field names when adding more data.
+Although ```disasterm3/models/\_\_init\_\_.py``` contains different models with different requirements, they were standardized through ```ModelConfig``` to follow a similar structure. Similarily, a new ```disasterm3/datasets/``` package could be created to standardize the dataset, supporting modularity within different datasets.
 
 
 
