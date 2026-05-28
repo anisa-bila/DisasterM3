@@ -198,6 +198,8 @@ if __name__ == '__main__':
     parser.add_argument('--tensor_parallel_size', type=int, default=None)
     parser.add_argument('--overwrite', action='store_true')
     parser.add_argument('--batch_size', type=int, default=8)
+    parser.add_argument('--dataset', type=str, default='disasterm3') # Added code line. "--dataset" to specify dataset
+    # Command line assessment example: python run_vllm.py --model_id QwenVL-7B --subset caption --dataset medical
     args = parser.parse_args()
 
     reformat_model_id = "/".join(args.model_id.strip("/").split("/")[-2:]).replace('/', '--')
@@ -216,7 +218,7 @@ if __name__ == '__main__':
     else:
         print(f"Start from scratch")
 
-    dataset = build_dataset_config("disasterm3", PROJECT_ROOT, args.subset)
+    dataset = build_dataset_config(args.dataset, PROJECT_ROOT, args.subset) # Edited data line. Passing the line argument without using any fixed variables
     ds = dataset.load()
     ds = [data_dict for data_dict in ds if data_dict["id"] not in finish_ids]
 
