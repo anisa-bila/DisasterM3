@@ -14,6 +14,10 @@ After the design and implementation of DisasterM3's pipeline, benchmark experime
 
 Larger VLMs comprise strong reasoning, which resulted in superior performances. On the other hand, some existing VLMs are still unable to fully grasp disaster tasks. With the fine-tuning of models, their generated reports have significantly improved. Other models that undergo degradation in these changes will require further deep investigations in future development.
 
+## Conclusion
+
+DisasterM3 was structured with a pipeline of disaster-related reasoning tasks for VLMs that are limited to comprehensive scene understanding. Further fine-tuning of models are operated to provide better responses and report of disaster assessment and classification.
+
 ## References
 
     Wang, Junjue, et al. “DisasterM3: A Remote Sensing Vision-Language Dataset for Disaster Damage Assessment and Response.” ArXiv.org, 2025, arxiv.org/abs/2505.21089.
