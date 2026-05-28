@@ -17,4 +17,4 @@ Larger VLMs comprise strong reasoning, which resulted in superior performances. 
 ## References
 
     Wang, Junjue, et al. “DisasterM3: A Remote Sensing Vision-Language Dataset for Disaster Damage Assessment and Response.” ArXiv.org, 2025, arxiv.org/abs/2505.21089.
-    ---. “EarthVL: A Progressive Earth Vision-Language Understanding and Generation Framework.” ArXiv.org, 2026, arxiv.org/abs/2601.02783. Accessed 28 May 2026.
+    Wang, Junjue, et al. “EarthVL: A Progressive Earth Vision-Language Understanding and Generation Framework.” ArXiv.org, 2026, arxiv.org/abs/2601.02783. Accessed 28 May 2026.
