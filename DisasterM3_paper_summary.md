@@ -13,3 +13,8 @@ Furthermore, DisasterM3 supplies input to the models with different reasoning ta
 After the design and implementation of DisasterM3's pipeline, benchmark experiments were conducted across various models, ranging from fourteen open source models, two commercial models, and four fine-tuned models. The broad selection of models allows a strong comparison of diverse models being tested with disaster-focused data, with the focus of understanding systems that generate poor outcomes.
 
 Larger VLMs comprise strong reasoning, which resulted in superior performances. On the other hand, some existing VLMs are still unable to fully grasp disaster tasks. With the fine-tuning of models, their generated reports have significantly improved. Other models that undergo degradation in these changes will require further deep investigations in future development.
+
+## References
+
+    Wang, Junjue, et al. “DisasterM3: A Remote Sensing Vision-Language Dataset for Disaster Damage Assessment and Response.” ArXiv.org, 2025, arxiv.org/abs/2505.21089.
+    ---. “EarthVL: A Progressive Earth Vision-Language Understanding and Generation Framework.” ArXiv.org, 2026, arxiv.org/abs/2601.02783. Accessed 28 May 2026.
