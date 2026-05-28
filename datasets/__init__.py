@@ -1,3 +1,5 @@
+# Every time a new dataset is added, add new lines here.
+
 from datasets.disasterm3 import DisasterM3Dataset
 
 def build_dataset_config(dataset_name, project_root, subset):
