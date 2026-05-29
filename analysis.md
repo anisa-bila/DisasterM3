@@ -40,7 +40,7 @@ DisasterM3/
 │   ├── \_\_init\_\_.py
 ```
 
-The ```models/``` package is responsible for preprocessing videos and images into an ideal format before feeding them into the model. The script is designed to format inputs differently depending on which model is being used.
+The ```models/``` package is responsible for preprocessing videos and images into an ideal format before feeding them into the model. The script formats inputs differently depending on the selected mode.
 
 The script mainly consists of two sections:
 
@@ -71,7 +71,7 @@ This main script includes:
 
 - ```prompt_libs```, a collection of blank question templates covering different disaster assessment tasks such as damage description and recovery recommendations, which later get filled with relevant pre-disaster and post-disaster images and questions.
 - ```get_messages_from_data``` fills the templates with actual disaster images and questions from the dataset for the model to answer.
-- Finalization of the script involves loading the disaster dataset, feeding it in batches through the model, and saving the answers to a result file.
+- The final stage of the script involves loading the disaster dataset, feeding it in batches through the model, and saving the answers to a result file.
 
 ## The Limitations
 
@@ -94,7 +94,7 @@ Separate scripts into independent functions for efficient modification. Each mod
 The script, ```disasterm3/pyscripts/run_vllm.py```, reads a JSON file with specific fields and data that are designed specifically for DisasterM3. Other datasets would need refining. Models are strictly evaluated with only this dataset with this hardcode format.
 
 ### Possible Solution
-Although ```disasterm3/models/\_\_init\_\_.py``` contains different models with different requirements, they were standardized through ```ModelConfig``` to follow a similar structure. Similarily, a new ```disasterm3/datasets/``` package could be created to standardize the dataset, supporting modularity within different datasets.
+Although ```disasterm3/models/\_\_init\_\_.py``` contains different models with different requirements, they were standardized through ```ModelConfig``` to follow a similar structure. similarly, a new ```disasterm3/datasets/``` package could be created to standardize the dataset, supporting modularity within different datasets.
 
 
 
