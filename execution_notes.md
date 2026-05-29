@@ -25,9 +25,11 @@ Models need GPUs for inference. QwenVL, InternVL, and Llava have billions of par
 
 ## Encountered Issues
 <img width="960" height="111" alt="Screenshot 2026-05-26 095833" src="https://github.com/user-attachments/assets/007a42db-de9a-45a9-8afc-3671c4bca419" />
+
 To execute this script successfully on another client, it is necessary to install all required dependencies beforehand to avoid getting repetitive errors as output. Additionally, ```vllm``` and ```transformers``` packages are large libraries that require significant storage space and installation time.
 
 <img width="1007" height="155" alt="image" src="https://github.com/user-attachments/assets/c5e8720f-f103-4acc-87a9-151dc15d6fc7" />
+
 The ```vllm``` module does not officially support Windows. As a result, the script is unable to run properly without a proper OS environment like Linux or Docker for high-performance inference. Attempting to install or run the script directly on Windows will result in installation and execution errors.
 
 ## Suggested README Improvements
