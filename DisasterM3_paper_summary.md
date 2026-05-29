@@ -1,6 +1,6 @@
 ## The Problem Statement
 
-Large vision-language models (VLMs) have been shown to achieve good performance in analyzing large-scale satellite imagery and geospatial analysis. In the case of natural disasters, structural damage assessment, disaster-specific impact evaluation, diverse regional analysis, and long-term disaster reports are of concern. However, VLMs are devoid of an in-depth understanding of disaster scenarios due to the lack of specialized disaster-related datasets and training data.
+Large vision-language models (VLMs) have been successful in analyzing large-scale satellite imagery and geospatial analysis. In the case of natural disasters, structural damage assessment, disaster-specific impact evaluation, diverse regional analysis, and long-term disaster reports are of concern. However, VLMs are devoid of an in-depth understanding of disaster scenarios due to the lack of specialized disaster-related datasets and training data.
 
 ## The Solution
 
@@ -16,7 +16,7 @@ Larger VLMs comprise strong reasoning, which resulted in superior performances. 
 
 ## Conclusion
 
-DisasterM3 was structured with a pipeline of disaster-related reasoning tasks for VLMs that are limited to comprehensive scene understanding. Further fine-tuning of models are operated to provide better responses and report of disaster assessment and classification.
+DisasterM3 was structured with a pipeline of disaster-related reasoning tasks for VLMs that are limited to comprehensive scene understanding. Further fine-tuning of models is performed to provide better responses and reports of disaster assessment and classification.
 
 ## References
 
