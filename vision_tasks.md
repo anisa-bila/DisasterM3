@@ -2,7 +2,7 @@
 
 These three objectives are fundamental in computer vision. Each of them detect objects and provide details with different levels of precision. They are used in natural disasters to automatically monitor and analyze damage assessment, allowing the optimization of rescue operations.
 
-1. **Classification**: Examines the whole image to classify and assign a suitable label for it. Image classification can highlight the visible disaster occuring without identifying its exact location.
+1. **Classification**: Examines the whole image to classify and assign a suitable label for it. Image classification can highlight the visible disaster occurring without identifying its exact location.
    <br>
    - **Output**: A single label assigned to the given image (e.g, "Flood", "Earthquake Damage")
    - **Natural Disaster Use Case**: Assesses the type of disaster visible in the image. It identifies whether the crisis is a wildfire, landslide, or another type of natural disaster.
