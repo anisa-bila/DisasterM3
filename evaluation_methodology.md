@@ -20,7 +20,7 @@ Two types of data are critical for this training process:
 
 **Graph Question Answering Data**:
 
-Graph Question Answering data is designed to test the model's ability to answer multi-level questions about images. It encourages models to perform visual reasoning using a structured map that connects the image's objects, their attributes, and the relationships between them to generate questions and answers.
+Graph Question Answering data is designed to test the model's ability to answer questions about images. It encourages models to perform visual reasoning using a structured map that connects the image's objects, their attributes, and the relationships between them to generate questions and answers.
 
 Two types of data are critical for this training process:
 
@@ -31,7 +31,7 @@ Two types of data are critical for this training process:
 **Other Types of Data Include**:
 
   - **Domain-specific Data**: Specialized datasets that help VLMs understand the relationship between images and the corresponding text in professional or operational contexts. (e.g., A photo of earthquake damage - "Collapsed buildings observed, high-risk of injuries.")
-  - **Web-Scale Data**: Large-scale datasets containing billions of image-text pairs collected from the Internet to expand the mode's understanding of concepts.
+  - **Web-Scale Data**: Large-scale datasets containing billions of image-text pairs collected from the Internet to expand the model's understanding of concepts.
 <br>
 
 ## Evaluation Metrics
@@ -42,7 +42,7 @@ Vision Language Models (VLMs) use several evaluation metrics to assess their cap
 
 - Different models are tested using standardized datasets with the purpose of challenging the model's reasoning and comprehension capabilities, often used to compare performance across models.
   <br>
-- **Importance in Natural Disaster**: Benchmark datasets allow teams to compare model performance and select the most reliable model. A model with poor benchmarch performance may fail to translate real-world scenarios, increasing risks in a diaster scenario.
+- **Importance in Natural Disaster**: Benchmark datasets allow teams to compare model performance and select the most reliable model. A model with poor benchmark performance may fail to translate real-world scenarios, increasing risks in a disaster scenario.
   
 **Accuracy**
   
@@ -69,7 +69,7 @@ Vision Language Models (VLMs) use several evaluation metrics to assess their cap
 - **Importance in Natural Disaster**: False positives and false negatives in disaster scenarios can directly harm affected populations by causing incorrect or delayed emergency responses.
   
 **Vector Quality**
-- Vectory quality analyzes the distance between vectors in a high-dimensional space, also known as a shared embedding space, to measure the similarity of relationships between them. Vectors that are close together indicate a  strong text-image link.
+- Vector quality analyzes the distance between vectors in a high-dimensional space, also known as a shared embedding space, to measure the similarity of relationships between them. Vectors that are close together indicate a  strong text-image link.
   <br>
 - **Importance in Natural Disaster**: Helps the model associate a disaster-related visual data with corresponding textual data. For example, a flood image should link closely to a flood situation report to support appropriate emergency measures.
 
