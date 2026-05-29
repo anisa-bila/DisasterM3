@@ -1,6 +1,6 @@
 ## Recreate Minimal Execution
 
-In this document, ```DisasterM3/pyscripts/run_vllm.py``` is executed to test and document for dependencies, execution steps, and potential issues. It is the main script that runs the actual inference stage, responsible for generating prompts by combining disaster images and textual data together. The script feeds disaster image-text pairs into the vision language models and saves their generated answers into a results file.
+In this document, ```DisasterM3/pyscripts/run_vllm.py``` is executed to test dependencies, execution steps, and potential issues. It is the main script that runs the actual inference stage, responsible for generating prompts by combining disaster images and textual data together. The script feeds disaster image-text pairs into the vision language models and saves their generated answers into a results file.
 
 ## Known Dependencies
 
@@ -18,10 +18,10 @@ The ```vllm``` module performs best in Linux or Docker environments. Linux is hi
 Models need GPUs for inference. QwenVL, InternVL, and Llava have billions of parameters that must be loaded into GPU memory to process and answer input questions. The largest models need multiple GPUs to work.
 
 ## Execution Steps
-1. Open Windows Terminal.
+1. Open a terminal (Windows/Linux)
 2. Run ```pip install Pillow tqdm transformers vllm```
 3. Run the ```run_vllm.py``` Python script.
-4. Script fails because vLLM does not official support Windows environments.
+4. If Windows terminal is used, the script fails because vLLM does not official support Windows environments.
 
 ## Encountered Issues
 <img width="960" height="111" alt="Screenshot 2026-05-26 095833" src="https://github.com/user-attachments/assets/007a42db-de9a-45a9-8afc-3671c4bca419" />
